@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pertemuan 1 Pengenalan Logika, Algoritma, Flowchart, dan Pseudocode</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+
+.instagram-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #0d6efd; /* Warna biru primary */
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      width: fit-content;
+      margin: 10px auto; /* Center tombol di halaman */
+    }
+
+    .instagram-button:hover {
+      background-color: #0069d9; /* Biru sedikit lebih gelap saat hover */
+    }
+
+    .instagram-button i {
+      margin-right: 8px;
+    }
+    
+    .fade-in {
+      aNISation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .erd-box {
+      border: 2px dashed #6c757d;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      background-color: #f8f9fa;
+    }
+
+    pre {
+      background-color: #eee;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body class="bg-light text-dark">
+
+  <div class="container py-5">
+    <h1 class="text-center mb-4 fade-in">📚 Pertemuan 1 <br> Pengenalan Logika, Algoritma, Flowchart, dan Pseudocode</h1>
+
+    <section class="fade-in">
+      <h3>🎯 Tujuan Pembelajaran</h3>
+      <ul>
+        <li>Mengenal pemrograman C++ melalui contoh paling sederhana.</li>
+        <li>Memahami struktur dasar program C++.</li>
+        <li>Memahami berbagai tipe data dalam C++.</li>
+        <li>Mengerti dasar konsep logika algoritma.</li>
+      </ul>
+    </section>
+
+    <hr class="my-4"/>
+
+    <section class="fade-in">
+      <h3>📚 Materi Pembelajaran</h3>
+
+        <div class="erd-box">
+            <h4>📝 1.1 Apa itu Logika & Algoritma?</h4>
+            <ul>
+              <li>
+                  <strong>Logika :</strong>
+                  Logika adalah ilmu berpikir sistematis, teratur, dan benar.
+                  Dalam pemrograman, logika digunakan untuk menyusun langkah penyelesaian masalah sehingga bisa diterjemahkan menjadi program.
+              </li>
+              <li>
+                  <strong>Algoritma :</strong>
+                  Algoritma adalah urutan langkah-langkah logis untuk memecahkan masalah.
+                  Syarat algoritma yang baik:
+                  <ul>
+                    <li><strong>Jelas :</strong> setiap langkah dapat dipahami.</li>
+                    <li><strong>Terbatas :</strong> algoritma harus berakhir, tidak berjalan terus menerus.</li>
+                    <li><strong>Efektif :</strong> dapat diselesaikan dengan langkah-langkah sederhana.</li>
+                  </ul>
+              </li>
+            </ul>
+        </div>
+      <br>
+
+      <section class="fade-in">
+        <div class="erd-box">
+          <h3>✏️ Representasi Algoritma</h3>
+          
+          <h5>📘 Algoritma bisa disajikan dalam:</h5>
+          <ul>
+            <li><strong>Pseudocode</strong>: Deskripsi langkah-langkah algoritma dalam bahasa sehari-hari yang mirip kode.</li>
+            <li><strong>Flowchart</strong>: Diagram alur untuk menggambarkan langkah-langkah algoritma secara visual.</li>
+          </ul>
+      
+          <h5>📝 Contoh Pseudocode dan Flowchart</h5>
+      
+          <p><strong>Contoh Soal:</strong> Membuat algoritma menghitung hasil penjumlahan.</p>
+      
+          <h5>📜 Pseudocode:</h5>
+          <pre>
+      1. Mulai
+      2. Input bilangan pertama
+      3. Input bilangan kedua
+      4. Hitung hasil = bilangan pertama + bilangan kedua
+      5. Tampilkan hasil
+      6. Selesai
+          </pre>
+      
+          <h5>📊 Flowchart:</h5>
+          <img src="https://via.placeholder.com/600x400" alt="Flowchart Algoritma Penjumlahan" class="img-fluid rounded border shadow-sm mt-2">
+      
+          <h5>💻 Implementasi Pseudocode ke Program C++</h5>
+          
+          <p><strong>Contoh Program C++ (Dev-C++):</strong></p>
+          <pre>
+      #include &lt;iostream&gt;
+      using namespace std;
+      
+      int main() {
+          float hasil, bil_1, bil_2;
+      
+          cout << "Masukkan bilangan pertama: ";
+          cin >> bil_1;
+          cout << "Masukkan bilangan kedua: ";
+          cin >> bil_2;
+      
+          hasil = bil_1 + bil_2;
+      
+          cout << "hasil penjumlahan adalah: " << hasil<< endl;
+      
+          return 0;
+      }
+          </pre>
+      
+          <h5>🔍 Penjelasan Program:</h5>
+          <ul>
+            <li><strong>#include &lt;iostream&gt;</strong>: Untuk memasukkan input/output.</li>
+            <li><strong>using namespace std;</strong>: Supaya bisa menggunakan <code>cout</code> dan <code>cin</code> tanpa perlu <code>std::</code>.</li>
+            <li><strong>cin &gt;&gt;</strong>: Digunakan untuk menerima input dari user.</li>
+            <li><strong>cout &lt;&lt;</strong>: Digunakan untuk menampilkan hasil ke layar.</li>
+            <li>Variabel <code>bil_1</code>, <code>bil_2</code>, dan <code>hasil</code> bertipe <code>float</code> untuk menerima angka desimal.</li>
+          </ul>
+        </div>
+      </section>
+
+
+          <hr class="my-4"/>
+
+    <section class="fade-in">
+    <div class="erd-box">  
+        <h4 class="mt-4">🧱 <strong>1.2 Apa itu Bahasa C++?</strong></h4>
+      
+        <div class="row g-4">
+            <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+              <div class="card-body">
+                <p class="card-text"><strong>C++</strong> adalah bahasa pemrograman tingkat tinggi yang cepat, kuat, dan sering digunakan untuk pengembangan aplikasi, game, sistem operasi, dan software berat lainnya.
+                  Di modul ini, kita akan menggunakan <strong>Dev C++</strong> sebagai editor untuk menulis dan menjalankan program C++.</p>
+              </div>
+            </div>
+          </div>
+        <br>
+
+        <div class="row g-4">
+          <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Struktur Dasar Program C++</strong></h5>
+              <p class="card-text"><strong>C++</strong> Sebuah program C++ minimal terdiri dari: </p>
+              <ul>
+                <li><b>Header</b> <pre> #include < iostream > </pre></li>
+                <li><b>Fungsi utama</b> <pre> int main() { ... } </pre></li>
+                <li><b>Perintah </b> <pre> cout, cin, dan sebagainya </pre></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="fade-in">
+        <div class="erd-box">
+          <h3>✏️ Contoh Program Pertama: "Hello World"</h3>
+          
+          <h5>💻 Kode Program:</h5>
+          <pre>
+      #include <iostream>
+      using namespace std;
+      
+      int main() {
+          cout << "Hello, World!" << endl;
+          return 0;
+      }
+          </pre>
+      
+          <h5>🔍 Penjelasan Program:</h5>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Bagian Kode</th>
+                <th>Penjelasan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>#include &lt;iostream&gt;</code></td>
+                <td>Mengizinkan penggunaan fungsi input/output seperti <code>cout</code>.</td>
+              </tr>
+              <tr>
+                <td><code>using namespace std;</code></td>
+                <td>Menghindari penulisan <code>std::</code> setiap kali menggunakan <code>cout</code> atau <code>cin</code>.</td>
+              </tr>
+              <tr>
+                <td><code>int main()</code></td>
+                <td>Fungsi utama tempat program dieksekusi pertama kali.</td>
+              </tr>
+              <tr>
+                <td><code>cout &lt;&lt; "Hello, World!";</code></td>
+                <td>Menampilkan teks ke layar.</td>
+              </tr>
+              <tr>
+                <td><code>return 0;</code></td>
+                <td>Mengakhiri program dan mengembalikan nilai 0 ke sistem operasi.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+      <hr class="my-4"/>
+
+      <section class="fade-in">
+        <div class="erd-box">
+          <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+            <div class="card-body">
+              <h3>✏️ Tipe Data di C++ (Penjelasan Lengkap)</h3>
+          
+              <p>Dalam C++, <strong>tipe data</strong> digunakan untuk menentukan jenis nilai dari sebuah variabel.</p>
+          
+              <h5>📋 Tabel Tipe Data:</h5>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Tipe Data</th>
+                    <th>Deskripsi</th>
+                    <th>Contoh Penggunaan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>int</code></td>
+                    <td>Bilangan bulat (tanpa desimal)</td>
+                    <td><code>int umur = 20;</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>float</code></td>
+                    <td>Bilangan pecahan (desimal) dengan ketelitian sedang</td>
+                    <td><code>float berat = 65.5;</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>double</code></td>
+                    <td>Bilangan pecahan (desimal) dengan ketelitian lebih tinggi dari <code>float</code></td>
+                    <td><code>double pi = 3.14159;</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>char</code></td>
+                    <td>Menyimpan 1 karakter</td>
+                    <td><code>char grade = 'A';</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>string</code></td>
+                    <td>Menyimpan kumpulan karakter (teks)</td>
+                    <td><code>string nama = "Budi";</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>bool</code></td>
+                    <td>Tipe data logika: <code>true</code> atau <code>false</code></td>
+                    <td><code>bool lulus = true;</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <br>
+          
+      <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+        <div class="card-body">
+          <h5>📜 Contoh Penggunaan Tipe Data:</h5>
+          <pre>
+      #include <iostream>
+      using namespace std;
+      
+      int main() {
+          int umur = 20;
+          float berat = 55.5;
+          double tinggi = 170.25;
+          char inisial = 'B';
+          string nama = "Budi";
+          bool lulus = true;
+      
+          cout << "Nama: " << nama << endl;
+          cout << "Inisial: " << inisial << endl;
+          cout << "Umur: " << umur << " tahun" << endl;
+          cout << "Berat: " << berat << " kg" << endl;
+          cout << "Tinggi: " << tinggi << " cm" << endl;
+          cout << "Status Lulus: " << lulus << endl;
+      
+          return 0;
+      }
+          </pre>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+        <div class="card-body">
+          <h5>📊 Output dari Program:</h5>
+          <pre>
+      Nama: Budi
+      Inisial: B
+      Umur: 20 tahun
+      Berat: 55.5 kg
+      Tinggi: 170.25 cm
+      Status Lulus: 1
+          </pre>
+      
+          <p><em>Catatan:</em> Untuk tipe <code>bool</code>, <code>true</code> akan ditampilkan sebagai angka <code>1</code>, dan <code>false</code> sebagai <code>0</code>.</p>
+        </div>
+      </div>
+      </section>
+    
+      <br>
+    </section>
+
+    <hr class="my-4"/>
+
+    <section class="fade-in">
+      <div class="erd-box">
+        <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+          <div class="card-body">
+            <h3>✏️ 1.3 Latihan Mandiri</h3>
+            
+            <p>💡 <strong>Tugas:</strong></p>
+            <ol>
+              <li>Buat program sederhana yang menampilkan informasi:
+                <ul>
+                  <li>Nama lengkap</li>
+                  <li>Umur</li>
+                  <li>Alamat</li>
+                  <li>Status lulus atau tidak (<code>true/false</code>)</li>
+                </ul>
+              </li>
+              <li>Gunakan semua tipe data yang telah dipelajari!</li>
+            </ol>
+          </div>
+        </div>
+        
+        <br>
+
+      
+        <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+          <div class="card-body">
+            <h3>📘 1.4 Latihan Soal</h3>
+              <p>💡 <strong>Silakan kerjakan di Dev-C++!</strong></p>
+          
+              <ol>
+                <li>Buatlah program C++ untuk menghitung luas persegi panjang!<br>
+                  Rumus: <code>luas = panjang * lebar</code>
+                </li>
+                <li>Buatlah program C++ untuk menghitung luas segitiga!<br>
+                  Rumus: <code>luas = 0.5 * alas * tinggi</code>
+                </li>
+                <li>Buatlah algoritma dan pseudocode untuk menghitung keliling persegi!<br>
+                  Rumus: <code>keliling = 4 * sisi</code>
+                </li>
+              </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-5"/>
+    
+    <!-- Tombol Klikable -->
+  <div class="container text-center">
+      <a href="https://www.instagram.com/bibib_17/" target="_blank" rel="noopener noreferrer" class="instagram-button">
+      <i class="fab fa-instagram"></i>
+      Follow Instagram-nya Juga Ga Sih..
+    </a>
+    <!-- <button class="btn btn-primary" onclick="window.open('https://bibib17.github.io/basisdata_dasar.github.io/pertemuan2.html', '_blank')">
+      📊 Lanjut Belajar Materi Pertemuan Ke-2
+    </button> -->
+  </div>
+  <hr class="my-5"/>
+          
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
