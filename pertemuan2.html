@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pertemuan 2 Pengenalan Logika, Operator dan Struktur Percabangan dalam C++</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    .instagram-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #0d6efd;
+      /* Warna biru primary */
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      width: fit-content;
+      margin: 10px auto;
+      /* Center tombol di halaman */
+    }
+
+    .instagram-button:hover {
+      background-color: #0069d9;
+      /* Biru sedikit lebih gelap saat hover */
+    }
+
+    .instagram-button i {
+      margin-right: 8px;
+    }
+
+    .fade-in {
+      aNISation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .erd-box {
+      border: 2px dashed #6c757d;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      background-color: #f8f9fa;
+    }
+
+    pre {
+      background-color: #eee;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body class="bg-light text-dark">
+
+  <div class="container py-5">
+    <h1 class="text-center mb-4 fade-in">📚 Pertemuan 2 <br> Operator dan Struktur Percabangan dalam C++</h1>
+
+    <section class="fade-in">
+      <h3>🎯 Tujuan Pembelajaran</h3>
+      <ul>
+        <li>Memahami konsep operator dalam C++.</li>
+        <li>Mampu menggunakan struktur percabangan <strong>(if, else if, else, switch)</strong> dalam program.</li>
+        <li>Menyelesaikan soal-soal sederhana menggunakan logika percabangan.</li>
+      </ul>
+    </section>
+
+    <hr class="my-4" />
+
+    <section class="fade-in">
+      <h3>📚 Materi Pembelajaran</h3>
+
+      <div class="erd-box">
+        <h4>📝 2.1 Apa itu Operator?</h4>
+        <ul>
+          <li>
+            <strong>Operator :</strong>
+            Operator adalah simbol yang digunakan untuk melakukan operasi terhadap satu atau beberapa nilai (operand).
+          </li>
+        </ul>
+      </div>
+
+      <hr class="my-4" />
+
+      <section class="fade-in">
+        <div class="erd-box">
+          <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+            <div class="card-body">
+              <h3>⚙️ Jenis-Jenis Operator dalam C++</h3>
+
+              <p>Operator digunakan untuk melakukan operasi terhadap variabel dan nilai dalam program.</p>
+
+              <h5>📋 Tabel Jenis Operator:</h5>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Jenis Operator</th>
+                    <th>Contoh</th>
+                    <th>Keterangan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Operator Aritmatika</td>
+                    <td><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></td>
+                    <td>Untuk operasi matematika</td>
+                  </tr>
+                  <tr>
+                    <td>Operator Perbandingan</td>
+                    <td><code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>,
+                      <code>&gt;=</code></td>
+                    <td>Untuk membandingkan dua nilai</td>
+                  </tr>
+                  <tr>
+                    <td>Operator Logika</td>
+                    <td><code>&&</code></td>
+                    <td>Ampersand, Penyesuaian 2 kondisi</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <hr class="my-4" />
+
+      <section class="fade-in">
+        <div class="erd-box">
+          <h3>✏️ 2.3 Contoh Operator Aritmatika</h3>
+
+          <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a = 10, b = 3;
+
+    cout &lt;&lt; "Penjumlahan: " &lt;&lt; a + b &lt;&lt; endl;
+    cout &lt;&lt; "Pengurangan: " &lt;&lt; a - b &lt;&lt; endl;
+    cout &lt;&lt; "Perkalian: " &lt;&lt; a * b &lt;&lt; endl;
+    cout &lt;&lt; "Pembagian: " &lt;&lt; a / b &lt;&lt; endl;
+    cout &lt;&lt; "Modulus: " &lt;&lt; a % b &lt;&lt; endl;
+
+    return 0;
+}
+    </code></pre>
+
+    <h5>📊 Output:</h5>
+    <pre>
+Penjumlahan: 13
+Pengurangan: 7
+Perkalian: 30
+Pembagian: 3
+Modulus: 1
+          </pre>
+        </div>
+      </section>
+
+      <hr class="my-4" />
+
+      <section class="fade-in">
+        <div class="erd-box">
+          <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+            <div class="card-body">
+              <h4>📝 2.4 Apa itu Struktur Percabangan?</h4>
+              <ul>
+                <li>
+                  <strong>Percabangan :</strong>
+                  Percabangan adalah proses memilih salah satu dari beberapa jalur eksekusi program berdasarkan kondisi
+                  tertentu.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-4" />
+
+      <section class="fade-in">
+        <div class="erd-box">
+          <h3>✏️ 2.5 Percabangan <code>if</code>, <code>else if</code>, dan <code>else</code></h3>
+          <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+            <div class="card-body">
+              <h5>📘 Struktur Umum:</h5>
+              <pre><code class="language-cpp">
+if (kondisi) {
+    // kode jika kondisi benar
+} else if (kondisi lain) {
+    // kode jika kondisi lain benar
+} else {
+    // kode jika semua kondisi salah
+}
+          </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-4" />
+
+      <section class="fade-in">
+        <div class="erd-box">
+          <h3>✏️ 2.6 Contoh Program Percabangan Sederhana</h3>
+          <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+            <div class="card-body">
+              <h5>📄 Contoh 1: Mengecek Bilangan Positif atau Negatif</h5>
+              <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int angka;
+    cout &lt;&lt; "Masukkan angka: ";
+    cin &gt;&gt; angka;
+
+    if (angka &gt; 0) {
+        cout &lt;&lt; "Angka positif." &lt;&lt; endl;
+    } else if (angka &lt; 0) {
+        cout &lt;&lt; "Angka negatif." &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "Angka nol." &lt;&lt; endl;
+    }
+
+    return 0;
+}
+          </code></pre>
+
+              <h5>🔍 Penjelasan:</h5>
+              <ul>
+                <li>Jika angka lebih besar dari 0 ➔ <strong>"positif"</strong></li>
+                <li>Jika angka lebih kecil dari 0 ➔ <strong>"negatif"</strong></li>
+                <li>Jika angka 0 ➔ <strong>"nol"</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-4" />
+
+      <section class="fade-in">
+        <div class="erd-box">
+          <h3>✏️ 2.7 Percabangan <code>switch case</code></h3>
+          <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+            <div class="card-body">
+              <h5>📘 Struktur Umum:</h5>
+              <pre><code class="language-cpp">
+switch (variabel) {
+    case nilai1:
+        // kode
+        break;
+    case nilai2:
+        // kode
+        break;
+    default:
+        // kode jika tidak ada yang cocok
+}
+          </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-4" />
+
+      <section class="fade-in">
+        <div class="erd-box">
+          <h3>✏️ 2.8 Contoh Program <code>switch case</code></h3>
+          <div class="card h-100 shadow-sm animate__animated animate__fadeInLeft">
+            <div class="card-body">
+              <h5>📄 Contoh 2: Menentukan Hari</h5>
+              <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int hari;
+    cout &lt;&lt; "Masukkan angka 1-5: ";
+    cin &gt;&gt; hari;
+
+    switch (hari) {
+        case 1:
+            cout &lt;&lt; "Senin" &lt;&lt; endl;
+            break;
+        case 2:
+            cout &lt;&lt; "Selasa" &lt;&lt; endl;
+            break;
+        case 3:
+            cout &lt;&lt; "Rabu" &lt;&lt; endl;
+            break;
+        case 4:
+            cout &lt;&lt; "Kamis" &lt;&lt; endl;
+            break;
+        case 5:
+            cout &lt;&lt; "Jumat" &lt;&lt; endl;
+            break;
+        default:
+            cout &lt;&lt; "Angka tidak valid" &lt;&lt; endl;
+    }
+
+    return 0;
+}
+          </code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5" />
+
+      <!-- Tombol Klikable -->
+      <div class="container text-center">
+        <a href="https://www.instagram.com/bibib_17/" target="_blank" rel="noopener noreferrer"
+          class="instagram-button">
+          <i class="fab fa-instagram"></i>
+          Follow Instagram-nya Juga Ga Sih..
+        </a>
+
+        <!-- onclick="window.open('https://bibib17.github.io/basisdata_dasar.github.io/pertemuan2.html')" -->
+        <button class="btn btn-primary">
+          📊 Lanjut Belajar Materi Pertemuan Ke-2
+        </button>
+      </div>
+      <hr class="my-5" />
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
